@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>JQuery Context Parameter</title>
+<style>
+  .content {
+    background-image: linear-gradient(to top right, #aaa, #ddd 75%);
+    width: 185px;
+  }
+</style>
+</head>
+<body>
+<form>
+  <input type="text">
+  <input type="password">
+  <input type="radio">
+  <input type="checkbox">
+  <input type="submit">
+  <input type="image">
+  <input type="reset">
+  <input type="button">
+  <input type="file">
+  <input type="hidden">
+  <textarea name="message"></textarea>
+</form>
+<div class="content">
+  <p style="color: red;">Some content</p>
+  <p>Some more content</p>
+  <p>Some more content</p>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+  </ul>
+  <p><a href="#">Some more content</a></p>
+  <p>Some more content</p>
+  <p>Some more content</p>
+  <p>Some more content</p>
+</div>
+<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+  $.expr[':'].inline = function(elem) {
+    return $(elem).css('display') === 'inline';
+  };
+  $(':inline').css('color', 'green');
+</script>
+</body>
+</html>
