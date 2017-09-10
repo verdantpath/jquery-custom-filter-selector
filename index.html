@@ -8,9 +8,13 @@
     background-image: linear-gradient(to top right, #aaa, #ddd 75%);
     width: 185px;
   }
+  p {
+    visibility: hidden;
+  }
 </style>
 </head>
 <body>
+  <h2 class="heading">Heading</h2>
 <form>
   <input type="text">
   <input type="password">
@@ -62,6 +66,13 @@
   };
   $(':inline').css('color', 'green');
   $('body > *').filter(':not("script")').addClass('selected');
+  // $('h2.heading').addClass('animate-left').hide().fadeIn();
+  $( "p" ).animate({
+  opacity: "show"
+}, {
+  duration: "slow",
+  easing: "easein"
+});
 </script>
 </body>
 </html>
