@@ -61,6 +61,7 @@
     return $(elem).css('display') === 'inline';
   };
   $(':inline').css('color', 'green');
+  $('body > *').filter(':not("script")').addClass('selected');
 </script>
 </body>
 </html>
